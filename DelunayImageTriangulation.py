@@ -19,8 +19,6 @@ import numpy as np
 import scipy as sp
 import scipy.spatial
 import matplotlib.pyplot as plt
-import copy
-import threading
 
 mode = "RGB"
 output = "jpeg"
@@ -136,9 +134,9 @@ def ReproduceAndMutate():
     plt.clf()
     plt.plot(accuracy)
     plt.pause(graphDelay)
-    instances[0] = copy.copy(instances[bestInstance[0]])
+    instances[0] = np.copy(instances[bestInstance[0]])
     for j in range(1, len(instances)):
-        instances[j] = copy.copy(instances[0])
+        instances[j] = np.copy(instances[0])
         for k in range(np.random.randint(numPoi * 2)):
             attribute = np.random.randint(2)
             instances[j][np.random.randint(numPoi)][attribute] = np.random.randint(dimensions[attribute])
