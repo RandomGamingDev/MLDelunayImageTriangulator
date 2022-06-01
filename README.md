@@ -15,10 +15,10 @@ How to use the script:
 
   Wait for the final result in output.jpeg!
 
-This is for Python 3.9 and requires the following dependencies:
-  pillow
-  numpy
-  scipy
+This is for Python 3.9 and requires the following dependencies: 
+  pillow, 
+  numpy, 
+  scipy, 
   matplotlib
 
 It takes a while for the image to generate but you can watch it learn not only in output.jpeg but also on the graph.
