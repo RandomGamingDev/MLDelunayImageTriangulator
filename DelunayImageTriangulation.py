@@ -4,20 +4,15 @@
 #     How to use the script:
 #
 #     Start by entering the settings that you want in settings.txt
-#     The 1st line is for the # of threads
-#     The 2nd line is for the # of instances
-#     The 3rd line is for the # of triangles per instance
-#     The 4th line is for the # of iterations
+#     The 1st line is for the # of instances
+#     The 2nd line is for the # of triangles per instance
+#     The 3rd line is for the # of iterations
 #
 #     Then after confirming the settings enter the filepath to the image relative to the executable or as a direct filepath
 #
 #     Then confirm that that's the image that you want
 #
 #     Wait for the final result in output.jpeg!
-#
-# Plans:
-# Better evolution
-# Multithreading
 
 from PIL import Image, ImageDraw
 import numpy as np
