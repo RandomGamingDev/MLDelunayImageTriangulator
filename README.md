@@ -21,6 +21,8 @@ numpy
 scipy
 matplotlib
 
-It takes a while for the iamge to generate but you can watch it learn not only in output.jpeg but also on the graph.
+It takes a while for the image to generate but you can watch it learn not only in output.jpeg but also on the graph.
+
+This application isn't multithreaded.
 
 Hope you enjoy!
