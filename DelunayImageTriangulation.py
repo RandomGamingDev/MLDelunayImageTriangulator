@@ -119,8 +119,7 @@ def RenderTriangles(instance):
         canvas.polygon(list(map(tuple, instance[triangles.simplices[i]])), fill = SampleTriange(instance[triangles.simplices[i]]))
 def HowDifferent(instance):
     RenderTriangles(instance)
-    difference = np.sum(np.absolute(np.subtract(const_img, img, dtype = np.int16)))
-    return difference
+    return np.sum(np.absolute(np.subtract(const_img, img, dtype = np.int16)))
 def Test():
     for j in range(1, len(instances)):
         ClearImg(canvas)
