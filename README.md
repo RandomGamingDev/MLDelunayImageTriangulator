@@ -1,4 +1,4 @@
-# MLDelunayTriangulation  
+# MLDelunayImageTriangulator
 A short, simple, and sweet ML script that triangulates images by use of Delunay Triangulation. 
   
 This is a python script that converts an image into a series of triangles  
