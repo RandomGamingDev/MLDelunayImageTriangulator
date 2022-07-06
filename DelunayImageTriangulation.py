@@ -142,7 +142,7 @@ def ReproduceAndMutate():
 
 if __name__ == "__main__":
     SetupFileData()
-    print("Machine learning algorithm starting...")
+    print("Machine learning algorithm running...")
     for i in range(numGen):
         bestInstance[0] = 0
         Test()
