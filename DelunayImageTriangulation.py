@@ -100,7 +100,7 @@ def SetupFileData():
 
     instances = np.random.randint(0, [dimensions[0], dimensions[1]], size=(numIns, numPoi, 2))
 
-    worstCase = np.sum(abs((255 * (np.asarray(const_img) < 128)) - np.asarray(const_img)))
+    worstCase = abs(np.sum(abs((255 * (np.asarray(const_img) < 128)) - np.asarray(const_img))))
     bestInstance = np.array((0, worstCase))
     accuracy = []
 
@@ -119,7 +119,7 @@ def RenderTriangles(instance):
         canvas.polygon(list(map(tuple, instance[triangles.simplices[i]])), fill = SampleTriange(instance[triangles.simplices[i]]))
 def HowDifferent(instance):
     RenderTriangles(instance)
-    return np.sum(np.absolute(np.subtract(const_img, img, dtype = np.int16)))
+    return np.sum(np.absolute(np.subtract(const_img, img)))
 def Test():
     for j in range(1, len(instances)):
         ClearImg(canvas)
@@ -129,7 +129,7 @@ def Test():
             bestInstance[1] = difference
 def ReproduceAndMutate():
     global graphTimer
-    accuracy.append(100 * (worstCase - bestInstance[1]).astype(np.uint64)/worstCase)
+    accuracy.append(100 * (worstCase - bestInstance[1]).astype(np.uint64) / worstCase)
     plt.clf()
     plt.plot(accuracy)
     plt.pause(graphDelay)
@@ -156,3 +156,4 @@ if __name__ == "__main__":
     print("Displaying result...")
     img.show()
     print("Displayed result!")
+
