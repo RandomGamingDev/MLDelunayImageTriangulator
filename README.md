@@ -27,3 +27,4 @@ This application isn't multithreaded.
   
 Hope you enjoy!  
   
+If output.jpeg isn't generating try changing the image type, png worked for me.
